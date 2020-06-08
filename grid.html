@@ -1,0 +1,336 @@
+<!-- Naomi Archibong -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<style>
+.container {
+    position:relative;
+    width: 100%;
+    background-color: dimgray;
+}
+
+.image {
+    opacity: 1;
+    display:inline-grid;
+    width:inherit;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility:hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align:center;
+}
+
+.container:hover .image {
+    opacity: 0;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: dodgerblue;
+    color: white;
+    font-size: 12px;
+    padding: 15px 32px;
+}
+
+.text-block {
+    background: black;
+    color: white;
+    padding: 0 20px 0;
+    position: absolute;
+    font-family:sans-serif;
+    top: 5px;
+    left: -10px;
+    font-size: 5px;
+}
+    
+div.p-name {
+    color: dimgray;
+    padding-left: 10px;
+    font-weight: bold;
+    font-family:sans-serif;
+    font-size:15x;
+}
+    
+div.p-price {
+    color: dimgray;
+    font-weight: bold;
+    font-family:sans-serif;
+    font-size:20px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+   
+div.old-price {
+    color: lightgray;
+    font-size:12px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-family:sans-serif;
+    padding-bottom: 5px;
+}
+
+div.p-desc {
+    color: red;
+    font-size: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-family:sans-serif;
+}
+
+#p-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Width of columns */
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+/* Product items */
+div.p-grid-in {
+    box-sizing: border-box;
+    margin: 5px; 
+    padding: 0px;
+    padding-bottom: 10px;
+    border: 1px solid lightgray;
+    background: white;
+}
+    
+/* The Modal (background) */
+.modal {
+   display: none; /* Hidden by default */
+   position:fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   padding-top:175px; /* Location of the box */
+   left: 35%;
+   top: 0;
+   width: 30%; /* Full width */
+   height: 33%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+   background-color: #fefefe;
+   margin: auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 90%;
+}
+
+/* The Close Button */
+.close {
+   color: #aaaaaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+}
+
+.close:hover,.close:focus {
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+}
+    
+</style>
+</head>
+<body>
+
+<div id="p-grid">
+    <div class="p-grid"><div class="p-grid-in">
+    <div class="container">
+    <img src="http://via.placeholder.com/350x350" alt="placeholder" class="image" style="width:100%">
+    <div class="text-block">
+    <h1>SALE</h1>
+    </div>
+    <div class="middle">
+    <div id = "myBtn" data-toggle="modal"  class="text">ADD TO CART</div>
+    </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-body">
+    <p><b>1 item Added To Cart</b></p>
+    <button id="exit"type="button" class="text" onclick="window.close();">CONTINUE SHOPPING</button>
+    <button id="exit2" type="button" class="text" data-dismiss="modal">CHECKOUT NOW</button>
+    </div>     
+        </div>
+            </div>
+    <br>
+    <div class="p-name">   Product Name</div>
+    <br>
+    <div class="p-price">$19.99</div>
+    <div class="old-price"><s>$24.99</s></div>
+    <div class="p-desc">Save 10% with Autoship</div>
+    </div>
+    </div>
+
+    
+<div class="p-grid"><div class="p-grid-in">
+    <div class="container">
+    <img src="http://via.placeholder.com/350x350" alt="placeholder"   class="image" style="width:100%">
+    <div class="text-block">
+    <h1>SALE</h1>
+    </div>
+    <div class="middle">
+    <div id = "myBtn2" data-toggle="modal"  class="text">ADD TO CART</div>
+    </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-body">
+    <p><b>1 item Added To Cart</b></p>
+    <button id="exit"type="button" class="text" onclick="window.close();">CONTINUE SHOPPING</button>
+    <button id="exit2" type="button" class="text" data-dismiss="modal">CHECKOUT NOW</button>
+    </div>     
+        </div>
+            </div>
+    <br>
+    <div class="p-name">   Product Name</div>
+    <br>
+    <div class="p-price">$19.99</div>
+    <div class="old-price"><s>$24.99</s></div>
+    <div class="p-desc">Save 10% with Autoship</div>
+    </div>
+    </div>
+    
+<div class="p-grid"><div class="p-grid-in">
+    <div class="container">
+    <img src="http://via.placeholder.com/350x350" alt="placeholder" class="image" style="width:100%">
+    <div class="text-block">
+    <h1>SALE</h1>
+    </div>
+    <div class="middle">
+    <div id = "myBtn3" data-toggle="modal"  class="text">ADD TO CART</div>
+    </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-body">
+    <p><b>1 item Added To Cart</b></p>
+    <button id="exit"type="button" class="text" onclick="window.close();">CONTINUE SHOPPING</button>
+    <button id="exit2" type="button" class="text" data-dismiss="modal">CHECKOUT NOW</button>
+    </div>     
+        </div>
+            </div>
+    <br>
+    <div class="p-name">   Product Name</div>
+    <br>
+    <div class="p-price">$19.99</div>
+    <div class="old-price"><s>$24.99</s></div>
+    <div class="p-desc">Save 10% with Autoship</div>
+    </div>
+    </div>
+
+<div class="p-grid"><div class="p-grid-in">
+    <div class="container">
+    <img src="http://via.placeholder.com/350x350" alt="placeholder" class="image" style="width:100%">
+    <div class="text-block">
+    <h1>SALE</h1>
+    </div>
+    <div class="middle">
+    <div id = "myBtn4" data-toggle="modal"  class="text">ADD TO CART</div>
+    </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-body">
+    <p><b>1 item Added To Cart</b></p>
+    <button id="exit"type="button" class="text" onclick="window.close();">CONTINUE SHOPPING</button>
+    <button id="exit2" type="button" class="text" data-dismiss="modal">CHECKOUT NOW</button>
+    </div>     
+        </div>
+            </div>
+    <br>
+    <div class="p-name">   Product Name</div>
+    <br>
+    <div class="p-price">$19.99</div>
+    <div class="old-price"><s>$24.99</s></div>
+    <div class="p-desc">Save 10% with Autoship</div>
+    </div>
+    </div>
+    
+</div>
+
+
+    
+</div>
+ 
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the buttons that open the modal
+var btn = document.getElementById("myBtn");
+var btn2 = document.getElementById("myBtn2");
+var btn3 = document.getElementById("myBtn3");
+var btn4 = document.getElementById("myBtn4");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// Get the button that for "Continue Shopping"
+var x = document.getElementById("exit");
+
+// Get the button that for "Checkout Now"
+var y = document.getElementById("exit2");
+    
+// When the user clicks the "Add To Cart" button, open the modal (for all 4 products)
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+btn2.onclick = function() {
+  modal.style.display = "block";
+}
+btn3.onclick = function() {
+  modal.style.display = "block";
+}
+btn4.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Close modal when you click on 'Continue Shopping' button
+x.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Close modal when you click on 'Checkout Now' button
+y.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+
+    
+</body>
+</html>
